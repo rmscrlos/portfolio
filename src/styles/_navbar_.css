@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navbar h2 span {
+  color: #6c63ff;
+  margin-right: .5rem;
+}
+
+.navbar h2 {
+  color: rgb(38, 38, 38);
+}

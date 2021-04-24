@@ -1,0 +1,12 @@
+.about__container h1 {
+	margin-bottom: 1rem;
+}
+
+.about__container span {
+	color: #6c63ff;
+}
+
+.about__container p {
+	margin: 1rem 0;
+	line-height: 1.7rem;
+}
