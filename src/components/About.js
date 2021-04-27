@@ -24,7 +24,7 @@ function About() {
 				world.
 			</p>
 			<p>
-				Intrested in entire Web Developement and Native spectrum and working on world-changing projects with
+				Interested in the entire Web Developement and Native spectrum and working on world-changing projects with
 				passionate people.
 			</p>
 		</motion.div>
