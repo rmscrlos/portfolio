@@ -1,3 +1,15 @@
 .contact__container span {
-	color: #6c63ff;
+  color: #6c63ff;
+}
+
+.contact__links {
+  display: flex;
+}
+
+.conctact__icons {
+  background: #6c63ff;
+  color: #fff;
+  margin: 1rem 1.5rem 0 0;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
 }

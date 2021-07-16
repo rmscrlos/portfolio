@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import About from './About';
@@ -7,50 +7,71 @@ import Contact from './Contact';
 import Projects from './Projects';
 import ThingsIKnow from './ThingsIKnow';
 
+const navLinks = [
+  {
+    title: 'about me',
+    goto: '/',
+  },
+  {
+    title: 'projects',
+    goto: '/projects',
+  },
+  {
+    title: 'things I know',
+    goto: '/know',
+  },
+  {
+    title: 'contact me',
+    goto: '/contact',
+  },
+];
+
 function Showcase() {
-	return (
-		<div className="showcase__container">
-			<div className="about__me">
-				<h2>
-					<span>Hello,</span> I'm Carlos Ramos
-				</h2>
-				<p>I am a Full-Stack Web Developer who's passionate about building beautiful Web Apps. </p>
-				<ul>
-					<motion.div whileHover={{ scale: 1.1 }}>
-						<Link to="/about">about me</Link>
-					</motion.div>
-					<motion.div whileHover={{ scale: 1.1 }}>
-						<Link to="/projects">projects</Link>
-					</motion.div>
-					<motion.div whileHover={{ scale: 1.1 }}>
-						<Link to="/know">things I know</Link>
-					</motion.div>
-					<motion.div whileHover={{ scale: 1.1 }}>
-						<Link to="/contactme">contact me</Link>
-					</motion.div>
-				</ul>
-			</div>
-			<div className="content">
-				{
-					<Switch>
-						<Route exact path="/about">
-							<About />
-						</Route>
-						<Route exact path="/projects">
-							<Projects />
-						</Route>
-						<Route exact path="/know">
-							<ThingsIKnow />
-						</Route>
-						<Route exact path="/contactme">
-							<Contact />
-						</Route>
-						<Route exact path="/" />
-					</Switch>
-				}
-			</div>
-		</div>
-	);
+  return (
+    <div className="showcase__container">
+      <div className="about__me">
+        <h2>
+          <span>Hello,</span> I'm Carlos Ramos
+        </h2>
+        <p>
+          I am a Full-Stack Web Developer who's passionate about building
+          beautiful Web Apps.{' '}
+        </p>
+        <ul>
+          {navLinks.map(l => (
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <NavLink
+                key={l.title}
+                activeStyle={{ backgroundColor: '#6c63ff', color: '#fff' }}
+                exact
+                to={l.goto}
+              >
+                {l.title}
+              </NavLink>
+            </motion.div>
+          ))}
+        </ul>
+      </div>
+      <div className="content">
+        {
+          <Switch>
+            <Route exact path="/">
+              <About />
+            </Route>
+            <Route exact path="/projects">
+              <Projects />
+            </Route>
+            <Route exact path="/know">
+              <ThingsIKnow />
+            </Route>
+            <Route exact path="/contact">
+              <Contact />
+            </Route>
+          </Switch>
+        }
+      </div>
+    </div>
+  );
 }
 
 export default Showcase;
