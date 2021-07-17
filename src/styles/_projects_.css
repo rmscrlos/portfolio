@@ -53,12 +53,8 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .project__card__container {
-    flex-direction: column;
-  }
-
   .project__card {
-    width: 60%;
+    width: 45%;
   }
 }
 
