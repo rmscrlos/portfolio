@@ -51,3 +51,30 @@
   font-weight: bold;
   margin-right: 0.7rem;
 }
+
+@media only screen and (min-width: 600px) {
+  .project__card__container {
+    flex-direction: column;
+  }
+
+  .project__card {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .project__card__container {
+    flex-direction: column;
+    width: 100%;
+    /* border: 1px solid red; */
+  }
+
+  .project__card {
+    width: 95%;
+    margin: 0.5rem 0.5rem 0 0;
+  }
+
+  .project__card__links a {
+    font-size: 0.64rem;
+  }
+}

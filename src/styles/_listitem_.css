@@ -1,5 +1,12 @@
 .list__container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .list__container {
+    height: 500px;
+    flex-direction: column;
+  }
 }

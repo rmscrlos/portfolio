@@ -13,3 +13,13 @@
   padding: 0.5rem;
   border-radius: 0.3rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .contact__links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+}

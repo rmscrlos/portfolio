@@ -7,26 +7,7 @@ import Contact from './Contact';
 import Projects from './Projects';
 import ThingsIKnow from './ThingsIKnow';
 
-const navLinks = [
-  {
-    title: 'about me',
-    goto: '/',
-  },
-  {
-    title: 'projects',
-    goto: '/projects',
-  },
-  {
-    title: 'things I know',
-    goto: '/know',
-  },
-  {
-    title: 'contact me',
-    goto: '/contact',
-  },
-];
-
-function Showcase() {
+function Showcase({ navLinks }) {
   return (
     <div className="showcase__container">
       <div className="about__me">

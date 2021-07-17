@@ -1,12 +1,28 @@
+.about__container {
+  width: 80%;
+}
+
 .about__container h1 {
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .about__container span {
-	color: #6c63ff;
+  color: #6c63ff;
 }
 
 .about__container p {
-	margin: 1rem 0;
-	line-height: 1.7rem;
+  margin: 1rem 0;
+  line-height: 1.7rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .about__container {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about__container {
+    width: 100%;
+  }
 }
