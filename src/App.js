@@ -32,7 +32,11 @@ function App() {
       <nav className={`nav__container ${active ? 'nav__active' : null}`}>
         <ul>
           {navLinks.map(l => (
-            <motion.div className="link" whileHover={{ scale: 1.1 }}>
+            <motion.div
+              onClick={() => setActive(false)}
+              className="link"
+              whileHover={{ scale: 1.1 }}
+            >
               <NavLink
                 key={l.title}
                 activeStyle={{ backgroundColor: '#6c63ff', color: '#fff' }}
