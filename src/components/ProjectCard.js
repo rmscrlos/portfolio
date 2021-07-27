@@ -9,8 +9,14 @@ function ProjectCard({ project }) {
       <p className="project__des">{project.description}</p>
       <p className="project__stack">{project.stack}</p>
       <div className="project__card__links">
-        <a href={project.github}>GitHub</a>
-        <a href={project.demo}>Live Demo</a>
+        <a href={project.github} target="_blank">
+          GitHub
+        </a>
+        {project.demo !== '' ? (
+          <a href={project.demo} target="_blank">
+            Live Demo
+          </a>
+        ) : null}
       </div>
     </div>
   );

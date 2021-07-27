@@ -18,17 +18,26 @@ function Contact() {
         Contact <span>Me.</span>
       </h1>
       <div className="contact__links">
-        <a href="mailto:rmscrlos@gmail.com" className="conctact__icons">
+        <a
+          href="mailto:rmscrlos@gmail.com"
+          className="conctact__icons"
+          target="_blank"
+        >
           <EmailIcon fontSize="large" />
         </a>
         <a
           href="https://www.linkedin.com/in/rmscrlos/"
           className="conctact__icons"
+          target="_blank"
         >
           <LinkedInIcon fontSize="large" />
         </a>
 
-        <a href="https://github.com/rmscrlos" className="conctact__icons">
+        <a
+          href="https://github.com/rmscrlos"
+          className="conctact__icons"
+          target="_blank"
+        >
           <GitHubIcon fontSize="large" />
         </a>
       </div>
